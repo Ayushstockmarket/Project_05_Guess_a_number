@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <div class="root">
+        <p>Enter a guess between 0 to 100</p>
+        <div class="input_container" title="Please select a value no more than 100">
+            <input type="number" min="1" max="100" placeholder="Enter a number" id="input_value_user" oninput="this.value = Math.max(1, Math.min(100, this.value))">
+        </div>
+        <div class="choose">
+            <button id="submit_btn">Start Game</button>
+        </div>
+        <div class="output">
+            <p id="alert_message"></p>
+            <p id="guesses"><span>You guesses:</span><span id="your_input_display" class="your_input_display"></span>
+            </p>
+            <p><span>Computer guesses:</span><span id="computer-guess"></span></p>
+        </div>
+    </div>
+</body>
+
+</html>
